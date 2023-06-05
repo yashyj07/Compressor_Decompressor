@@ -75,12 +75,13 @@ public class AppFrame extends JFrame implements ActionListener{
                 System.out.print(file);
                 try{
                     compressor.method(file);
+                    JOptionPane.showMessageDialog(null, "File has been compressed");
                 }
                 catch(Exception e1){
                     JOptionPane.showMessageDialog(null, e1.toString());
                 }
                 
-                JOptionPane.showMessageDialog(null, "File has been compressed");
+                
             }
         }
         
@@ -92,12 +93,11 @@ public class AppFrame extends JFrame implements ActionListener{
                 System.out.print(file);
                 try{
                     decompressor.method(file);
+                    JOptionPane.showMessageDialog(null, "File has been decompressed");
                 }
                 catch (Exception e1) {
                     JOptionPane.showMessageDialog(null, e1.toString());
                 }
-                
-                JOptionPane.showMessageDialog(null, "File has been decompressed");
             }
         }
     }
